@@ -54,8 +54,7 @@ All implementations are written in MATLAB using built-in functions and simple sc
 The goal of this repository is to build a strong foundation in image processing concepts that can be extended to:
 
 * Computer Vision
-* Medical Image Analysis
-* Deep Learning-based Image Processing
+* Image Processing
 
 ---
 
