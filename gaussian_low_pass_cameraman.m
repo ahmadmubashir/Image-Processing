@@ -1,0 +1,41 @@
+clc;
+clear all;
+
+% Read the cameraman image (if not already in your workspace)
+cameraman = imread('cameraman.tif'); % Assuming 'cameraman.tif' is in the MATLAB path
+
+% Convert the image to double for processing
+cameraman = im2double(cameraman);
+
+% Get image dimensions
+[m, n] = size(cameraman);
+
+% Filter parameters
+sigma = 10; % Standard deviation for Gaussian filter
+filter_size = 256; % Choose an appropriate filter size based on the standard deviation
+
+% Create Gaussian filter
+[x, y] = meshgrid(-n/2:n/2-1, -m/2:m/2-1);
+gaussian_filter = exp(-(x.^2 + y.^2) / (2*sigma^2));
+gaussian_filter = fftshift(gaussian_filter); % Shift to center
+
+% For gaussian high pass filtering
+% gaussian_filter = 1 - gaussian_filter;
+
+% Compute Fourier transform of the image
+F = fft2(cameraman);
+
+% Apply the filter in the frequency domain
+filtered_image_F = F .* gaussian_filter;
+
+% Inverse Fourier transform to get the filtered image
+filtered_image = ifft2(filtered_image_F);
+
+% Display the original and filtered images
+subplot(1, 2, 1);
+imshow(cameraman);
+title('Original Image');
+
+subplot(1, 2, 2);
+imshow(abs(filtered_image), []);
+title('Filtered Image (Gaussian Low-Pass)');
