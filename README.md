@@ -31,26 +31,6 @@ All implementations are written in MATLAB using built-in functions and simple sc
 
 ---
 
-## 📂 Project Structure
-
-```text
-image-processing-basics/
-│
-├── scripts/
-│   ├── read_image.m
-│   ├── filtering.m
-│   ├── edge_detection.m
-│   ├── histogram_analysis.m
-│   └── transformations.m
-│
-├── images/
-│   └── sample_images.jpg
-│
-└── README.md
-```
-
----
-
 ## ⚙️ Requirements
 
 * MATLAB (R2020a or later recommended)
@@ -58,21 +38,7 @@ image-processing-basics/
 
 ---
 
-## ▶️ How to Run
 
-1. Open MATLAB
-2. Navigate to the project folder:
-
-   ```matlab
-   cd 'path_to_project_folder'
-   ```
-3. Run any script, for example:
-
-   ```matlab
-   run('scripts/edge_detection.m')
-   ```
-
----
 
 ## 📊 Example Features
 
