@@ -49,7 +49,7 @@ All implementations are written in MATLAB using built-in functions and simple sc
 
 ---
 
-## 🎯 هدف المشروع (Project Goal)
+# (Project Goal)
 
 The goal of this repository is to build a strong foundation in image processing concepts that can be extended to:
 
@@ -73,7 +73,3 @@ The goal of this repository is to build a strong foundation in image processing 
 Mubashir Ahmad
 
 ---
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
